@@ -1,6 +1,7 @@
 import {
   ChangeDirectoryCommand,
   ConcatenateCommand,
+  CreateFileCommand,
   ListCommand,
   OperatingSystemCommand,
   UpCommand,
@@ -11,6 +12,7 @@ const commands = {
   ls: 'ls',
   cd: 'cd',
   cat: 'cat',
+  add: 'add',
   os: 'os',
 };
 
@@ -25,5 +27,7 @@ commandsMap.set(commands.cd, new ChangeDirectoryCommand());
 commandsMap.set(commands.os, new OperatingSystemCommand());
 
 commandsMap.set(commands.cat, new ConcatenateCommand());
+
+commandsMap.set(commands.add, new CreateFileCommand());
 
 export { commandsMap };
