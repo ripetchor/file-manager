@@ -2,6 +2,7 @@ import {
   ChangeDirectoryCommand,
   CopyFileCommand,
   CreateFileCommand,
+  DeleteFileCommand,
   ListCommand,
   MoveFileCommand,
   OperatingSystemCommand,
@@ -19,6 +20,7 @@ const commands = {
   rn: 'rn',
   cp: 'cp',
   mv: 'mv',
+  rm: 'rm',
   os: 'os',
 };
 
@@ -41,5 +43,7 @@ commandsMap.set(commands.rn, new RenameFileCommand());
 commandsMap.set(commands.cp, new CopyFileCommand());
 
 commandsMap.set(commands.mv, new MoveFileCommand());
+
+commandsMap.set(commands.rm, new DeleteFileCommand());
 
 export { commandsMap };
