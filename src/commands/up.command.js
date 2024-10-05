@@ -1,4 +1,4 @@
-import { chdir } from 'process';
+import { chdir } from 'node:process';
 import { loggerService } from '../services/index.js';
 
 export class UpCommand {
