@@ -4,6 +4,7 @@ import {
   ListCommand,
   OperatingSystemCommand,
   ReadFileCommand,
+  RenameFileCommand,
   UpCommand,
 } from '../commands/index.js';
 
@@ -13,6 +14,7 @@ const commands = {
   cd: 'cd',
   cat: 'cat',
   add: 'add',
+  rn: 'rn',
   os: 'os',
 };
 
@@ -29,5 +31,7 @@ commandsMap.set(commands.os, new OperatingSystemCommand());
 commandsMap.set(commands.cat, new ReadFileCommand());
 
 commandsMap.set(commands.add, new CreateFileCommand());
+
+commandsMap.set(commands.rn, new RenameFileCommand());
 
 export { commandsMap };
