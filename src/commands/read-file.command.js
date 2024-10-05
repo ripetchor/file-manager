@@ -1,7 +1,7 @@
 import { createReadStream } from 'fs';
 import { loggerService } from '../services/index.js';
 
-export class ConcatenateCommand {
+export class ReadFileCommand {
   async execute(pathToFile) {
     try {
       const readStream = createReadStream(pathToFile);

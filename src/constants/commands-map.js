@@ -1,9 +1,9 @@
 import {
   ChangeDirectoryCommand,
-  ConcatenateCommand,
   CreateFileCommand,
   ListCommand,
   OperatingSystemCommand,
+  ReadFileCommand,
   UpCommand,
 } from '../commands/index.js';
 
@@ -26,7 +26,7 @@ commandsMap.set(commands.cd, new ChangeDirectoryCommand());
 
 commandsMap.set(commands.os, new OperatingSystemCommand());
 
-commandsMap.set(commands.cat, new ConcatenateCommand());
+commandsMap.set(commands.cat, new ReadFileCommand());
 
 commandsMap.set(commands.add, new CreateFileCommand());
 
