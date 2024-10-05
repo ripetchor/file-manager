@@ -1,6 +1,7 @@
 import { homedir } from 'node:os';
 import { chdir, cwd, exit, stdin, stdout } from 'node:process';
 import { createInterface } from 'node:readline';
+import { commandsMap } from './constants/constants.js';
 import { loggerService } from './services/index.js';
 import { getUserName } from './utils/get-user-name.js';
 
@@ -19,6 +20,14 @@ const lineHandler = (line) => {
   if (line.trim() === '.exit') {
     loggerService.logFarewell(userName);
     exit();
+  }
+
+  const [command, ...commandArgs] = line.trim().split(' ');
+
+  if (!commandsMap.has(command)) {
+    loggerService.logMessage('Invalid input');
+  } else {
+    commandsMap.get(command).execute(...commandArgs);
   }
 
   loggerService.logCurrentDirectory(cwd());
