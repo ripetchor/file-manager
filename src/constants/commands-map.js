@@ -1,5 +1,6 @@
 import {
   ChangeDirectoryCommand,
+  CopyFileCommand,
   CreateFileCommand,
   ListCommand,
   OperatingSystemCommand,
@@ -15,6 +16,7 @@ const commands = {
   cat: 'cat',
   add: 'add',
   rn: 'rn',
+  cp: 'cp',
   os: 'os',
 };
 
@@ -33,5 +35,7 @@ commandsMap.set(commands.cat, new ReadFileCommand());
 commandsMap.set(commands.add, new CreateFileCommand());
 
 commandsMap.set(commands.rn, new RenameFileCommand());
+
+commandsMap.set(commands.cp, new CopyFileCommand());
 
 export { commandsMap };

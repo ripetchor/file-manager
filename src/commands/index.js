@@ -5,3 +5,4 @@ export { OperatingSystemCommand } from './operating-system.command.js';
 export { ReadFileCommand } from './read-file.command.js';
 export { RenameFileCommand } from './rename-file.command.js';
 export { UpCommand } from './up.command.js';
+export { CopyFileCommand } from './copy-file.command.js';
