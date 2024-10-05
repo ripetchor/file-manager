@@ -1,7 +1,7 @@
 import { homedir } from 'node:os';
 import { chdir, cwd, exit, stdin, stdout } from 'node:process';
 import { createInterface } from 'node:readline';
-import { commandsMap } from './constants/constants.js';
+import { commandsMap } from './constants/index.js';
 import { loggerService } from './services/index.js';
 import { getUserName } from './utils/get-user-name.js';
 

@@ -1,5 +1,5 @@
 import os from 'node:os';
-import { osCommandsMap } from '../constants/constants.js';
+import { osCommandsMap } from '../constants/index.js';
 import { loggerService } from '../services/index.js';
 
 export class OperatingSystemCommand {
