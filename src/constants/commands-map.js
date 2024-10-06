@@ -1,4 +1,5 @@
 import {
+  CalculateHashCommand,
   ChangeDirectoryCommand,
   CopyFileCommand,
   CreateFileCommand,
@@ -22,6 +23,7 @@ const commands = {
   mv: 'mv',
   rm: 'rm',
   os: 'os',
+  hash: 'hash',
 };
 
 const commandsMap = new Map();
@@ -45,5 +47,7 @@ commandsMap.set(commands.cp, new CopyFileCommand());
 commandsMap.set(commands.mv, new MoveFileCommand());
 
 commandsMap.set(commands.rm, new DeleteFileCommand());
+
+commandsMap.set(commands.hash, new CalculateHashCommand());
 
 export { commandsMap };
