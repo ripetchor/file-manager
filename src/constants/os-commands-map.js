@@ -24,7 +24,8 @@ osCommandsMap.set(osCommandArgs.homedir, (osModule, loggerService) => {
 });
 
 osCommandsMap.set(osCommandArgs.username, (osModule, loggerService) => {
-  loggerService.logMessage(osModule.hostname());
+  const { username } = osModule.userInfo();
+  loggerService.logMessage(username);
 });
 
 osCommandsMap.set(osCommandArgs.architecture, (osModule, loggerService) => {
