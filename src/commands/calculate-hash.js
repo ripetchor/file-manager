@@ -19,8 +19,7 @@ export class CalculateHashCommand {
       readStream.on('end', () => {
         loggerService.logMessage(hash.digest('hex'));
       });
-    } catch (error) {
-      console.error(error);
+    } catch {
       loggerService.logMessage('Operation failed');
     }
   }
