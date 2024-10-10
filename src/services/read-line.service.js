@@ -30,7 +30,10 @@ class ReadLineService {
       this.#stopProcess();
     }
 
-    const [command, ...commandArgs] = line.trim().split(' ');
+    const [command, ...commandArgs] = line
+      .trim()
+      .split(' ')
+      .filter((arg) => arg);
     const trimmedCommand = command.trim();
     const trimmedArgs = commandArgs.map((arg) => arg.trim());
 
