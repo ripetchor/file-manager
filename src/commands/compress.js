@@ -16,7 +16,7 @@ export class CompressCommand {
       const writeStream = createWriteStream(join(pathToDestinationResolved, srcFileName + '.br'));
 
       await pipeline(readStream, createBrotliCompress(), writeStream);
-    } catch (e) {
+    } catch {
       loggerService.logMessage('Operation failed');
     }
   }
