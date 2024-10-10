@@ -4,6 +4,7 @@ import {
   CompressCommand,
   CopyFileCommand,
   CreateFileCommand,
+  DecompressCommand,
   DeleteFileCommand,
   ListCommand,
   MoveFileCommand,
@@ -26,6 +27,7 @@ const commands = {
   os: 'os',
   hash: 'hash',
   compress: 'compress',
+  decompress: 'decompress',
 };
 
 const commandsMap = new Map();
@@ -53,5 +55,7 @@ commandsMap.set(commands.rm, new DeleteFileCommand());
 commandsMap.set(commands.hash, new CalculateHashCommand());
 
 commandsMap.set(commands.compress, new CompressCommand());
+
+commandsMap.set(commands.decompress, new DecompressCommand());
 
 export { commandsMap };
