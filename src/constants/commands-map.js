@@ -16,8 +16,8 @@ import {
 
 const commands = {
   up: 'up',
-  ls: 'ls',
   cd: 'cd',
+  ls: 'ls',
   cat: 'cat',
   add: 'add',
   rn: 'rn',
@@ -34,11 +34,9 @@ const commandsMap = new Map();
 
 commandsMap.set(commands.up, new UpCommand());
 
-commandsMap.set(commands.ls, new ListCommand());
-
 commandsMap.set(commands.cd, new ChangeDirectoryCommand());
 
-commandsMap.set(commands.os, new OperatingSystemCommand());
+commandsMap.set(commands.ls, new ListCommand());
 
 commandsMap.set(commands.cat, new ReadFileCommand());
 
@@ -51,6 +49,8 @@ commandsMap.set(commands.cp, new CopyFileCommand());
 commandsMap.set(commands.mv, new MoveFileCommand());
 
 commandsMap.set(commands.rm, new DeleteFileCommand());
+
+commandsMap.set(commands.os, new OperatingSystemCommand());
 
 commandsMap.set(commands.hash, new CalculateHashCommand());
 
