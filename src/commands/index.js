@@ -1,5 +1,6 @@
 export { CalculateHashCommand } from './calculate-hash.js';
 export { ChangeDirectoryCommand } from './change-directory.js';
+export { CompressCommand } from './compress.js';
 export { CopyFileCommand } from './copy-file.js';
 export { CreateFileCommand } from './create-file.js';
 export { DeleteFileCommand } from './delete-file.js';
