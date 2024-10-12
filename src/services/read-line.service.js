@@ -1,4 +1,4 @@
-import { homedir } from 'node:os';
+import { EOL, homedir } from 'node:os';
 import { chdir, cwd, exit, stdin, stdout } from 'node:process';
 import { createInterface } from 'node:readline';
 import { commandsMap } from '../constants/index.js';
@@ -45,6 +45,7 @@ class ReadLineService {
 
     this.#loggerService.logCurrentDirectory(cwd());
     this.prompt();
+    stdout.write('' + EOL);
   }
 
   #stopProcess() {
